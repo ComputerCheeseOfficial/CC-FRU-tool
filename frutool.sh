@@ -3,8 +3,8 @@ if [ -f "fru.sh" ]; then
     rm fru.sh
 fi 
 
-#filename='fru.conf'
-filename='fru_conf_example.conf'
+filename='fru.conf'
+#filename='fru_conf_example.conf'
 
 COMM_HEAR_VALE=()
 INTL_AREA_VALE=()
