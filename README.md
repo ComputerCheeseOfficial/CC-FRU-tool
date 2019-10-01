@@ -39,7 +39,7 @@ ChassisPartNumber=CC-0001
 ChassisSerialNumber=CC-0001
 
 [Board Info Area]
-MfgDateTime=20191001 00:00:00
+MfgDateTime=20190927 00:00:00
 BoardManufacturer=ComputerCheese
 BoardProductName=FRU_Tool
 BoardSerialNumber=CC_0001
