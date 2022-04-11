@@ -90,11 +90,14 @@ function FETCH_FIELD_DATA()
         strlen=0
         strs="${_FILD_VALE_ARRY[j]}"
         strlen=$((${#strs}))
+        #2022-04-08 Fixed issue about cannot over 15 characters
+        strlen=$(($strlen + 192))
         x=${#_AREA_VALE_ARRY[@]}
         ## code bits 7:6=11b the serial number will always be
         ## interpreted as 8-bit ASCII+Latin 1, not 16-bit UNICODE.
         strlenHEX=`echo "obase=16; ${strlen}" | bc`
-        _AREA_VALE_ARRY[x]="C"$strlenHEX
+        #2022-04-08 Fixed issue about cannot over 15 characters
+        _AREA_VALE_ARRY[x]=$strlenHEX
 
         x=${#_AREA_VALE_ARRY[@]}
         AREA_INQUIRY $x "${_FILD_VALE_ARRY[j]}" _AREA_VALE_ARRY
