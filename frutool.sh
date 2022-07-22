@@ -1,4 +1,8 @@
 #!/bin/bash
+
+#2022-07-22 Stop on error
+set -e
+
 if [ -f "fru.sh" ]; then  
     rm fru.sh
 fi 
