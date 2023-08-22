@@ -1,5 +1,7 @@
 #!/bin/bash
-#2023-08-11 Fix shellcheck issues
+
+#2023-08-22 V04 Modify the field name of the configuration file and fix the typo
+#2023-08-11 V03 Fix shellcheck issues
 
 #2022-07-22 Stop on error
 set -e
@@ -13,13 +15,13 @@ filename=fru.conf
 
 COMM_HEAR_VALE=()
 INTL_AREA_VALE=()
-CHAS_FILD_NAME=(ChassisPartNumber ChassisSerialNumber)
+CHAS_FILD_NAME=("Chassis Part Number" "Chassis Serial Number")
 CHAS_FILD_VALE=()
 CHAS_AREA_VALE=()
-BOAD_FILD_NAME=(MfgDateTime BoardManufacturer BoardProductName BoardSerialNumber BoardPartNumber)
+BOAD_FILD_NAME=("Mfg Date Time" "Board Manufacturer" "Board Product Name" "Board Serial Number" "Board Part Number")
 BOAD_FILD_VALE=()
 BOAD_AREA_VALE=()
-PROT_FILD_NAME=(ManufacturerName ProductName ProductPartModelNumber ProductVersion ProductSerialNumber AssetTag)
+PROT_FILD_NAME=("Manufacturer Name" "Product Name" "Product Part/Model Number" "Product Version" "Product Serial Number" "Asset Tag")
 PROT_FILD_VALE=()
 PROT_AREA_VALE=()
 

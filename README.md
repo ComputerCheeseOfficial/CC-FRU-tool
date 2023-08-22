@@ -14,44 +14,44 @@ chmod +x frutool.sh
 Add basic FRU infomation to fru.conf file
 ```
 [Chassis Info Area]
-ChassisPartNumber=
-ChassisSerialNumber=
+Chassis Part Number=
+Chassis Serial Number=
 
 [Board Info Area]
-MfgDateTime=20190927 00:00:00
-BoardManufacturer=
-BoardProductName=
-BoardSerialNumber=
-BoardPartNumber=
+Mfg Date Time=
+Board Manufacturer=
+Board Product Name=
+Board Serial Number=
+Board Part Number=
 
 [Product Info Area]
-ManufacturerName=
-ProductName=
-ProductPartModelNumber=
-ProductVersion=
-ProductSerialNumber=
-AssetTag=
+Manufacturer Name=
+Product Name=
+Product Part/Model Number=
+Product Version=
+Product Serial Number=
+Asset Tag=
 ```
-For example:
+For example in fru_conf_example.conf file:
 ```
 [Chassis Info Area]
-ChassisPartNumber=CC-0001
-ChassisSerialNumber=CC-0001
+Chassis Part Number=CC 0004
+Chassis Serial Number=CC 0004
 
 [Board Info Area]
-MfgDateTime=20190927 00:00:00
-BoardManufacturer=ComputerCheese
-BoardProductName=FRU_Tool
-BoardSerialNumber=CC_0001
-BoardPartNumber=CC_0001
+Mfg Date Time=20230822 14:00:00
+Board Manufacturer=Computer Cheese
+Board Product Name=CC-FRU-tool
+Board Serial Number=CC-FRU-tool V04
+Board Part Number=CC 0004
 
 [Product Info Area]
-ManufacturerName=ComputerCheese
-ProductName=ComputerCheese
-ProductPartModelNumber=MODEL-2019
-ProductVersion=0.1
-ProductSerialNumber=SERIL0001
-AssetTag=ComputerCheese
+Manufacturer Name=Computer Cheese
+Product Name=CC-FRU-tool V0.4
+Product Part/Model Number=MODEL-2023
+Product Version=0.4
+Product Serial Number=CC20230822V04
+Asset Tag=Computer Cheese 20230822
 ```
 ### 3) Generage fru.sh with IPMI raw commands
 ```
@@ -64,23 +64,23 @@ sudo ./fru.sh
 ```
 For example:
 
-After writing the expample configurations:
+After writing the example configurations:
 ```
 FRU Device Description : Builtin FRU Device (ID 0)
  Chassis Type          : Rack Mount Chassis
- Chassis Part Number   : CC-0001
- Chassis Serial        : CC_0001
- Board Mfg Date        : Fri Sep 27 05:00:00 2019
- Board Mfg             : ComputerCheese
- Board Product         : FRU_Tool
- Board Serial          : CC_0001
- Board Part Number     : CC_0001
- Product Manufacturer  : ComputerCheese
- Product Name          : ComputerCheese
- Product Part Number   : MODEL-2019
- Product Version       : 0.1
- Product Serial        : SERIL0001
- Product Asset Tag     : ComputerCheese
+ Chassis Part Number   : CC 0004
+ Chassis Serial        : CC 0004
+ Board Mfg Date        : Tue Aug 22 20:10:00 2023
+ Board Mfg             : Computer Cheese
+ Board Product         : CC-FRU-tool
+ Board Serial          : CC-FRU-tool V04
+ Board Part Number     : CC 0004
+ Product Manufacturer  : Computer Cheese
+ Product Name          : CC-FRU-tool V0.4
+ Product Part Number   : MODEL-2023
+ Product Version       : 0.4
+ Product Serial        : CC20230822V04
+ Product Asset Tag     : Computer Cheese 20230822
 ```
 ## Doc Reference
 [IPMI v2.0, rev. 1.1 markup for Errata 7, April 21, 2015](https://www.intel.com.tw/content/www/tw/zh/servers/ipmi/ipmi-intelligent-platform-mgt-interface-spec-2nd-gen-v2-0-spec-update.html)
